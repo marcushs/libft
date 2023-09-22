@@ -6,9 +6,13 @@
 #    By: hleung <hleung@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 13:20:40 by hleung            #+#    #+#              #
-#    Updated: 2023/05/15 17:34:09 by hleung           ###   ########lyon.fr    #
+#    Updated: 2023/09/22 11:47:28 by hleung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+NC = \033[0m
 
 NAME	=	libft.a
 
@@ -36,6 +40,7 @@ all:		${NAME}
 
 ${NAME}:	${DIR_OBJS} ${SRCS} ${OBJS} 
 			ar rcs ${NAME} ${OBJS}
+			@echo "${GREEN}Compiled Libft!${NC}"
 
 ${DIR_OBJS}:
 				mkdir -p ${DIR_OBJS}
