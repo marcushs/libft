@@ -6,7 +6,7 @@
 /*   By: hleung <hleung@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:19:45 by hleung            #+#    #+#             */
-/*   Updated: 2022/11/13 12:39:19 by hleung           ###   ########lyon.fr   */
+/*   Updated: 2023/10/13 19:22:36 by hleung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	int		len;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	cpy = (char *)malloc(sizeof(char) * len + 1);
 	if (!cpy)
